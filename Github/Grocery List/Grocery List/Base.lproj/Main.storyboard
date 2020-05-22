@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Grocery_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Groceries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ai8-iJ-AMs">
+                                <rect key="frame" x="16" y="74" width="74" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W2U-Vq-iEb">
+                                <rect key="frame" x="16" y="112" width="272" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="272" id="mH8-G7-hMt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y19-jR-f6k">
+                                <rect key="frame" x="296" y="111" width="63" height="30"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addItem:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fay-HS-tTV"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hNa-pf-B1m">
+                                <rect key="frame" x="16" y="150" width="343" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hNa-pf-B1m" secondAttribute="bottom" constant="20" symbolic="YES" id="4Li-cu-hjf"/>
+                            <constraint firstItem="ai8-iJ-AMs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="4XA-6f-olx"/>
+                            <constraint firstItem="hNa-pf-B1m" firstAttribute="top" secondItem="W2U-Vq-iEb" secondAttribute="bottom" constant="8" symbolic="YES" id="7Ip-v0-tnd"/>
+                            <constraint firstItem="hNa-pf-B1m" firstAttribute="leading" secondItem="W2U-Vq-iEb" secondAttribute="leading" id="8KD-I1-TTb"/>
+                            <constraint firstItem="Y19-jR-f6k" firstAttribute="leading" secondItem="W2U-Vq-iEb" secondAttribute="trailing" constant="8" symbolic="YES" id="8UB-kz-Zw2"/>
+                            <constraint firstItem="W2U-Vq-iEb" firstAttribute="leading" secondItem="ai8-iJ-AMs" secondAttribute="leading" id="8el-KG-NFf"/>
+                            <constraint firstItem="Y19-jR-f6k" firstAttribute="baseline" secondItem="W2U-Vq-iEb" secondAttribute="baseline" id="MQA-R4-zU9"/>
+                            <constraint firstItem="W2U-Vq-iEb" firstAttribute="top" secondItem="ai8-iJ-AMs" secondAttribute="bottom" constant="17" id="P0P-u7-eCg"/>
+                            <constraint firstItem="ai8-iJ-AMs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="54" id="Q7h-Ql-LeK"/>
+                            <constraint firstItem="Y19-jR-f6k" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eFn-hw-Wi8"/>
+                            <constraint firstItem="hNa-pf-B1m" firstAttribute="trailing" secondItem="Y19-jR-f6k" secondAttribute="trailing" id="ewK-vE-eAC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="groceryTextView" destination="hNa-pf-B1m" id="NwL-72-Uqy"/>
+                        <outlet property="textField" destination="W2U-Vq-iEb" id="1tD-YW-RoG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
+        </scene>
+    </scenes>
+</document>
